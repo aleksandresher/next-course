@@ -1,6 +1,6 @@
+"use client";
 import React from "react";
 import { notFound } from "next/navigation";
-import { count } from "console";
 
 function getRandomInt(count: number) {
   return Math.floor(Math.random() * count);
