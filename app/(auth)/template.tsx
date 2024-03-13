@@ -17,13 +17,17 @@ export default function AuthLayout({
   children: React.ReactNode;
 }) {
   const pathname = usePathname();
-  console.log(pathname);
+
   const [input, setInput] = useState("");
 
   return (
     <div>
-      <div>
-        <input value={input} onChange={(e) => setInput(e.target.value)} />
+      <div className="p-3">
+        <input
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="bg-yellow-400 rounded-lg p-2"
+        />
       </div>
       {navLinks.map((link) => {
         const isActive = pathname.startsWith(link.href);
